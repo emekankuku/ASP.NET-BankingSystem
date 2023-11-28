@@ -1,0 +1,34 @@
+﻿@model Balance
+
+@{
+    ViewData["Title"] = "GetBalance";
+}
+
+<h1>Balance</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Checking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Savings)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Checking)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Savings)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a class="nav-link btn btn-link text-dark" asp-controller="Balances" asp-action="Deposit">Deposit</a>
+<a class="nav-link btn btn-link text-dark" asp-controller="Balances" asp-action="Transfer">Transfer</a>
+

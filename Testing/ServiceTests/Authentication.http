@@ -1,0 +1,25 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+POST https://localhost:7199/api/authentication/register
+Content-Type: application/json
+Accept: application/json
+Access-Control-Allow-Credentials: true
+
+{
+     "username": "emekankuku@gmail.com",
+     "email": "emekankuku@gmail.com",
+     "password": "Asdfghjkl;1",
+     "checking": 500.00,
+     "savings": 500.00
+ }
+
+###
+
+POST https://localhost:7199/api/authentication/login
+Content-Type: application/json
+Accept: application/json
+Access-Control-Allow-Credentials: true
+
+{
+     "username": "RavyMiyazaki",
+     "password": "Asdfghjkl;2"
+ }

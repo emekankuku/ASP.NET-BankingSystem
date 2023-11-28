@@ -1,0 +1,41 @@
+﻿@model BankingSystem.DTO.TransferModel
+
+@{
+    ViewData["Title"] = "Transfer";
+}
+
+<h1>Deposit</h1>
+
+<form id="transaction" asp-action="Transfer" asp-controller="Balances" method="post">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="form-floating">
+		<input asp-for="trans" class="form-control" autocomplete="deposit" aria-required="true" />
+		<label asp-for="trans">Transfer Amount: </label>
+		<span asp-validation-for="trans" class="text-danger"></span>
+	</div>
+	<div class="form-floating">
+		<label asp-for="fromAccount">From: </label>
+		<select asp-for="fromAccount">
+			<option value="checking">Checking</option>
+			<option value="savings">Savings</option>
+		</select>
+		<span asp-validation-for="fromAccount" class="text-danger"></span>
+	</div>
+	<div class="form-floating">
+		<label asp-for="toAccount">To: </label>
+		<select asp-for="toAccount">
+			<option value="checking">Checking</option>
+			<option value="savings">Savings</option>
+		</select>
+		<span asp-validation-for="toAccount" class="text-danger"></span>
+	</div>
+	<button id="depositTransaction" type="submit" class="w-100 btn btn-lg btn-primary">Deposit</button>
+</form>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
+
+

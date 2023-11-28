@@ -1,0 +1,13 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+POST https://localhost:7199/api/Balances/create
+Content-Type: application/json
+Accept: application/json
+Access-Control-Allow-Credentials: true
+
+{
+     "username": "RavyMiyazaki",
+     "checking": 502.00,
+     "savings": 500.00
+ }
+
+###

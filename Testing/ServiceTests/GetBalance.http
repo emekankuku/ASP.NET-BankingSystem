@@ -1,0 +1,11 @@
+﻿# For more info on HTTP files go to https://aka.ms/vs/httpfile
+POST https://localhost:7199/api/Balances/getBalance
+Content-Type: application/json
+Accept: application/json
+Access-Control-Allow-Credentials: true
+
+{
+     "username": "emekankuku@gmail.com"
+ }
+
+###
